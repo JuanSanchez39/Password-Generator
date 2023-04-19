@@ -69,7 +69,7 @@ function generatePassword() {
     }
     if (includeLowerCaseCharacters) {
       if (!checkIfStringContains(generatedPassword, "abcdefghijklmnopqrstuvwxyz")) {
-       userSelections = true
+        userSelections = true
       }
 
     }
