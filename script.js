@@ -17,17 +17,16 @@ function checkIfStringContains(str, characters) {
 function generatePassword() {
   var generatedPassword = "";
   var characters = "";
-  //-1 ask user how mnay characters
-  var numberOfCharacters = prompt("How many characters in the password?");
+  //-1 ask user how many characters
+  var numberOfCharacters = prompt("How many characters do you want in the password?");
   console.log(numberOfCharacters)
   // if you put cancel the page wouldnt move from position ( created new line to fix bug)
   if (!numberOfCharacters) {
     return;
   }
   if (numberOfCharacters < 8) {
-    alert("needs to at least 8 characters");
-    generatePassword()
-    return;
+    alert(" Needs to have at least 8 characters, please try again");
+    return generatePassword();
   }
   //-2 ask if the user wants to include special characters
   var includeSpecialCharacter = confirm("Do you want to add any special characters?");
